@@ -11,9 +11,9 @@ Model → class inside that module.
 
 class Room(models.Model):
     name = models.CharField(max_length=200)
-    description = models.TextField(null=True, blank=True)
-    updated = models.DateTimeField(auto_now=True)
-    created = models.DateTimeField(auto_now_add=True)
+    description = models.TextField(null = True, blank=True)
+    updated = models.DateTimeField(auto_now=True) # Updates the timestamp every time the object is saved
+    created = models.DateTimeField(auto_now_add=True) # Sets the timestamp once when the object is created
 
     def __str__(self):
         return self.name
